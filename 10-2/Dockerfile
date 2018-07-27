@@ -6,10 +6,11 @@ ENV PLV8_VERSION=v2.3.7
 
 RUN apk --update add --virtual build-dependencies \
     make \
+    curl \
     git \
     python \
     && mkdir -p /tmp/build \
-    && wget -O /tmp/build/${PLV8_VERSION}.tar.gz "https://github.com/plv8/plv8/archive/$PLV8_VERSION.tar.gz" \
+    && curl -o /tmp/build/${PLV8_VERSION}.tar.gz -SL "https://github.com/plv8/plv8/archive/$PLV8_VERSION.tar.gz" \
     && tar -xzf /tmp/build/${PLV8_VERSION}.tar.gz -C /tmp/build/ \
     && cd /tmp/build/plv8-${PLV8_VERSION#?} \
     && make static\

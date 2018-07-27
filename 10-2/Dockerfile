@@ -2,7 +2,7 @@ FROM postgres:10-alpine
 
 MAINTAINER ta.kiyama
 
-ENV PLV8_VERSION=v2.7.3
+ENV PLV8_VERSION=v2.3.7
 
 RUN apk --update add --virtual build-dependencies \
     make \

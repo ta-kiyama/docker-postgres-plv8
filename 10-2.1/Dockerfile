@@ -1,9 +1,9 @@
 FROM postgres:10
 
-MAINTAINER ta.kiyama
+MAINTAINER ta-kiyama <ta.kiyama@eimee.co.jp>
 
-ENV PLV8_VERSION=v2.1.0 \
-    PLV8_SHASUM="207d712e919ab666936f42b29ff3eae413736b70745f5bfeb2d0910f0c017a5c  v2.1.0.tar.gz"
+ENV PLV8_VERSION=v2.1.2 \
+  PLV8_SHASUM="47c43feb8f14624f1704616cdc19a2947662a54141cc15568c386f6aac608f23  v2.1.2.tar.gz"
 
 RUN buildDependencies="build-essential \
     ca-certificates \
